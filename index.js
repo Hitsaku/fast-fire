@@ -28,7 +28,7 @@ module.exports = function FastFire(dispatch) {
     enabled = [JOB_ARCHER, JOB_GUNNER, JOB_NINJA].includes(job);
   });
 
-  dispatch.hook('sPlayerStatUpdate', (event) => {
+  dispatch.hook('sPlayerStatUpdate', 1, event => {
     aspd = 1 + (event.bonusAttackSpeed / event.baseAttackSpeed);
   });
 
